@@ -19,7 +19,7 @@ public class SearchGoogleTest {
 
     @BeforeTest
     public void setDriver() throws Exception {
-        String path = "chromedriver.exe";
+        String path = "chromedriver91.exe";
         System.setProperty("webdriver.chrome.driver", path);
         driver = new ChromeDriver();
 
@@ -45,7 +45,8 @@ public class SearchGoogleTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        WebElement result = driver.findElement(By.xpath("//*[@id=\"wp-tabs-container\"]/div[1]/div[2]/div[1]/div/div[2]/h2/span"));
+//        WebElement result = driver.findElement(By.xpath("//*[@id=\"wp-tabs-container\"]/div[1]/div[2]/div[1]/div/div[2]/h2/span"));
+        WebElement result = driver.findElement(By.xpath("//*[@id=\"_32muYMaAAsic5OUPn_2tqAY86\"]/div[1]/div[2]/div[1]/div/div[2]/h2"));
         Assert.assertEquals(result.getText(), "Universidad Católica Boliviana \"San Pablo\" Regional La Paz");
     }
 
